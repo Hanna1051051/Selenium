@@ -1,0 +1,103 @@
+{
+  "id": "ac012a98-1b6e-43e2-86d3-a5cf5b1af4c0",
+  "version": "2.0",
+  "name": "Verify_email",
+  "url": "https://crm.geekbrains.space",
+  "tests": [{
+    "id": "669e68ce-edb7-4e96-911e-2050ad0b3dc0",
+    "name": "Email",
+    "commands": [{
+      "id": "604c701f-4909-4efc-a5ef-bec2588dd34d",
+      "comment": "",
+      "command": "open",
+      "target": "/user/login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1aea545b-3d6b-4fd6-92e6-882da065a26d",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1040x980",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3c9114ec-1c8b-410b-8efa-edade5e413bc",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//input[@id='prependedInput']",
+      "targets": [
+        ["id=prependedInput", "id"],
+        ["name=_username", "name"],
+        ["css=#prependedInput", "css:finder"],
+        ["xpath=//input[@id='prependedInput']", "xpath:attributes"],
+        ["xpath=//form[@id='login-form']/fieldset/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d5eb7c0f-34fc-4e46-a447-b0dc14aaf34f",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=//input[@id='prependedInput']",
+      "targets": [
+        ["id=prependedInput", "id"],
+        ["name=_username", "name"],
+        ["css=#prependedInput", "css:finder"],
+        ["xpath=//input[@id='prependedInput']", "xpath:attributes"],
+        ["xpath=//form[@id='login-form']/fieldset/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "1051051@MAIL.RU"
+    }, {
+      "id": "df3e300d-3e96-4772-b7f4-d6fa7d1a0d4c",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.title",
+      "targets": [
+        ["css=.title", "css:finder"],
+        ["xpath=//form[@id='login-form']/div/h2", "xpath:idRelative"],
+        ["xpath=//h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'Логин')]", "xpath:innerText"]
+      ],
+      "value": "Логин"
+    }, {
+      "id": "27f976cd-140d-4855-9f20-e5468dde5799",
+      "comment": "",
+      "command": "verifyValue",
+      "target": "xpath=//input[@id='prependedInput']",
+      "targets": [
+        ["id=prependedInput", "id"],
+        ["name=_username", "name"],
+        ["css=#prependedInput", "css:finder"],
+        ["xpath=//input[@id='prependedInput']", "xpath:attributes"],
+        ["xpath=//form[@id='login-form']/fieldset/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "1051051@MAIL.RU"
+    }, {
+      "id": "9b753f5f-2248-4ff2-8c7a-94102b7a9f78",
+      "comment": "",
+      "command": "assertValue",
+      "target": "xpath=//input[@id='prependedInput']",
+      "targets": [
+        ["id=prependedInput", "id"],
+        ["name=_username", "name"],
+        ["css=#prependedInput", "css:finder"],
+        ["xpath=//input[@id='prependedInput']", "xpath:attributes"],
+        ["xpath=//form[@id='login-form']/fieldset/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "1051051@MAIL.RU"
+    }]
+  }],
+  "suites": [{
+    "id": "7bf371c3-7303-45d7-91f4-fce6d4a47f0c",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["669e68ce-edb7-4e96-911e-2050ad0b3dc0"]
+  }],
+  "urls": ["https://crm.geekbrains.space/"],
+  "plugins": []
+}
